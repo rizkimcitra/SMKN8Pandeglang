@@ -53,7 +53,7 @@ else if (hrs >= 18 && hrs <= 24) greet = "Selamat Malam!";
 //get document or tag that contain id "greeting"
 document.getElementById("greeting").innerHTML = greet;
 
-//show hidden table on petugas page
+//show hidden table
 function showTable() {
   var btnShowList = document.getElementById("hiddenTable");
   if (btnShowList.offsetParent === null) {
@@ -62,45 +62,3 @@ function showTable() {
     btnShowList.style.display = "none";
   }
 }
-
-//show hidden table on kelas page
-function showTableTwo() {
-  var btnShowListTwo = document.getElementById("hiddenTableTwo");
-  if (btnShowListTwo.offsetParent === null) {
-    btnShowListTwo.style.display = "flex";
-  } else {
-    btnShowListTwo.style.display = "none";
-  }
-}
-
-//show hidden table on spp page
-function showTableThree() {
-  var btnShowListThree = document.getElementById("hiddenTableThree");
-  if (btnShowListThree.offsetParent === null) {
-    btnShowListThree.style.display = "block";
-  } else {
-    btnShowListThree.style.display = "none";
-  }
-}
-
-//show hidden table on siswa page
-function showTableFour() {
-  var btnShowListFour = document.getElementById("hiddenTableFour");
-  if (btnShowListFour.offsetParent === null) {
-    btnShowListFour.style.display = "flex";
-  } else {
-    btnShowListFour.style.display = "none";
-  }
-}
-
-//show hidden table on pembayaran page
-function showTableFive() {
-  var btnShowListFive = document.getElementById("hiddenTableFive");
-  if (btnShowListFive.offsetParent === null) {
-    btnShowListFive.style.display = "flex";
-  } else {
-    btnShowListFive.style.display = "none";
-  }
-}
-
-//
