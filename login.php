@@ -13,6 +13,16 @@
     
     <!-- Box Icons   -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css" />
+    
+    <!--   Jquery    -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+    $(document).ready(function(){
+  $("#close_ok").click(function(){
+    $(".alert").hide();
+  });
+});
+    </script>
 
     <title>Admin Login</title>
   </head>
@@ -39,7 +49,16 @@
             <input type="checkbox" name="checkbox" onclick="showPassword()" />show password
             <div class="foot">
               <button type="submit" name="login">login</button>
-              <a href="#">forgot password?</a>
+              <?php 
+                if(isset($_GET['error'])){
+                if($_GET['error']=="login-failed"){
+                  echo "<div class='alert' id='foo'>
+                    <p>Username atau Password salah !</p>
+                    <div class='closeok' id='close_ok'><i class='bx bx-x'></i></div>
+                  </div>";
+                  }
+                }
+              ?>
             </div>
           </form>
         </div>
